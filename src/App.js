@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const title = 'Welcome to the new blog';
+  const likes = 50;
+  const colors = ['blue','yellow','red'];
+ const person = { name: 'diego', age: 35 };
+  const link = 'http://www.google.com';
+
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Welcome to my app</h1>{/*Text added*/}
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     {/* only can have one root element in JSX <div className="App">*/}
+    {/* Insted of use attribute class we should use className*/}
+      <div className="content">
+        <h1>{ title }</h1>
+        <p>Liked { likes } times</p>
+        <p>{ person.name }</p> 
+         
+        <p>{ 10 }</p>
+        <p>{ colors }</p>
+        <p>{ "hello, friends" }</p>
+        <p>{ [1,2,3,4,5] }</p>
+        <p>{ Math.random() * 10 }</p>
+
+        <a href={link}>Google Site</a>
+      </div>
     </div>
   );
 }
